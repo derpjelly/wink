@@ -1,14 +1,6 @@
 language: node_js
 node_js:
   - "0.12"
-install:
-- npm install -g grunt-cli
-- npm install -g bower
-- npm install
-- bower install
-script:
-- grunt build
-after_success: bundle exec s3_website push --headless
 env:
   global:
     secure: LUcntS2wdD9nQy+kLZUKouCXA/ghPw9UmRyWxgnjZGtq1xDAxymS2h/YC0dUkvN9rIEZ7mHbfUgaiCYSeX+rZWHkh1YX//3FAE30sgpTH0HD3O4OMGl1S64aCXJpRSNF6oHuQ7bm1j56JolfyPGjJpQIxYzCfCIbyaVtwOxc4t93J4aNNL5QV1ohqoG8bH0xUM+W6fy7EYvaCY6jQZY92o3EilIK6ImPkxl3JiPZj0cnr9uuSRDqDTJQUIfI1QXT67qhdWkQpr62Su2zH/542mPMZ19HnoxHhxYwE0dPCodogMUmmefrtyeApSVysasB0WWo+L3ERj1y34MNVc4IoW7LTb81UxjR2Jk/VPnJdxXfDF6X4XQWb4O4JvadX08TV6L6x6sXpG/8DVOXtWOYlmJSNNExUuOfTlfgvrluSVNZ/AnbKS+p/Qy8XFYVC5bNbs9YGMU8vO5tVMeUraQLB3GqAxxsVtqTTXMqbPA1Aa7AAcdkl/0hqv8azlYmzvLFMDNemWUYrs/JQMlUgo2vlXyncKO4I9tyHnVHZh5jGwoIVqVO7BD0JQu2GgdB5QtBa1Lgy/eW6rRZ1gIR+mZwPNiYR1Hd16pfHS0PKBhr86ByH57Xats6fscKE2ks22zVU6dJiNSa4iXvl7i2l6GmvgMd8kfWT3jRECU3V13U7CA=
