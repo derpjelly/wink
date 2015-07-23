@@ -1,12 +1,14 @@
 language: node_js
-node_js:
-- '0.12'
 deploy:
   provider: s3
   access_key_id: AKIAJXYTQI4EKGRO7XGQ
   secret_access_key:
     secure: SLyZaV9MNGJYnM56oA1F9J5WW8zFrrENizgdStsXrclaQGXEdnMh8RM8ylZ0Grrq40sT+V4hBtdT9me1FujgKHe42lxh8sDp4utWVA19FBMrY5LFziTJdMk+MLXlwCcVpCk8HM2jtjgMiPx1eWsSYbYj/xzb4IsmusRTzfO633KnLDmihTk50Di4AJTe5p15c0tsuaFGFEB2ChX/pa4EL7+PFRlC9162awGMQ1DupZjD+jXUt5FhnaryYIXgRLxPDOarjcKBsyqaoTCmr3QyeEtdYln7XG02sRX6Svvv0VYUHfdgCE2C0hpwXf/TE17Fh+libvg6UFQE5VKMjBPPWIt8iTornzQQF6/H/oWXlF1jyE6Cj9RmUDWlUltrIX4cHjAvVscjWIe+cG6aK2850/FxcV8YGNSMiRSiC03DxuFnSqsgYH8imsDaw1rE3fRjfJMOkP6PbgvMK57SOLdginqREbrvtTc3vf/3s1a/24WOsVNNb0yKNm6rNl3SznNCFD0kx6Pa1S21+cxVA2WpMQqrYtowmCGGWaDerjlWAbRl17Rjn6u6LpQmR3dzxs8RQjAnX02ZjhYjtt0P+sBj8gKt87lmBpTJplS7OmS6UVPwWdrP00EN1XoADy4zJzUWeKYf/lx9A/gnlO4m7qg/iXb/+KppdjGAzGMnkfpJ9jM=
   bucket: butterbar.io
+  skip_cleanup: true
+  local_dir: dist
+  endpoint: butterbar.io.s3-website-us-east-1.amazonaws.com
+  region: us-east-1
   acl: bucket_owner_full_control
   on:
     repo: derpjelly/wink
