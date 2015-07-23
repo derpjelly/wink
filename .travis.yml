@@ -1,6 +1,13 @@
-language: ruby
-rvm:
-- 2.0.0
+language: node_js
+node_js:
+  - "0.12"
+install:
+- npm install -g grunt-cli
+- npm install -g bower
+- npm install
+- bower install
+script:
+- grunt build
 after_success: bundle exec s3_website push --headless
 env:
   global:
